@@ -272,7 +272,7 @@ def parse_args():
                         help='Action to operate on msDS-AllowedToActOnBehalfOfOtherIdentity')
 
     parser.add_argument('-use-ldaps', action='store_true', help='Use LDAPS instead of LDAP')
-
+    parser.add_argument('-use-channel-binding', action='store_true', help='Enable LDAPS Channel Binding')
     parser.add_argument('-ts', action='store_true', help='Adds timestamp to every logging output')
     parser.add_argument('-debug', action='store_true', help='Turn DEBUG output ON')
 
