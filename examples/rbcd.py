@@ -314,7 +314,7 @@ def main():
     domain, username, password, lmhash, nthash, args.k = parse_identity(args.identity, args.hashes, args.no_pass, args.aesKey, args.k)
 
     try:
-        ldap_server, ldap_session = init_ldap_session(domain, username, password, lmhash, nthash, args.k, args.dc_ip, args.dc_host, args.aesKey, args.use_ldaps, args.use_channel_binding))
+        ldap_server, ldap_session = init_ldap_session(domain, username, password, lmhash, nthash, args.k, args.dc_ip, args.dc_host, args.aesKey, args.use_ldaps, args.use_channel_binding)
         rbcd = RBCD(ldap_server, ldap_session, args.delegate_to)
         if args.action == 'read':
             rbcd.read()
